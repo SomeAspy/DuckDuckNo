@@ -1,5 +1,5 @@
 var he = document.getElementById("header");
-var baseurl = "https://curly-limit-5a5e.drns.workers.dev/?url=https://api.duckduckgo.com/?q=";
+var baseurl = "https://ddn.bootloader.repl.co/?q=";
 var options = "&format=json";
 
 async function go() {
