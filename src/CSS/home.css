@@ -45,3 +45,21 @@ body {
     font-family: Manrope;
     text-align: center;
 }
+
+.footer{
+    position: absolute;
+    transform:translateX(-60%);
+    bottom:1%;
+    left: 50%;
+    color:#fff;
+    font-family: Manrope;
+    text-align: center;
+}
+
+a:link{
+    color: #fff;
+}
+
+a:link :visited {
+    color: #fff;
+}
