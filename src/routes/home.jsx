@@ -3,17 +3,9 @@
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
 
-import '../CSS/search.css';
+import '../CSS/home.css';
 import logo from '../assets/logo.svg';
-
-const handleSearch = (event) => {
-    if (event.key === 'Enter') {
-        event.preventDefault();
-        window.location.href = `https://duckduckgo.com/?q=${
-            document.getElementById('userSearch').value
-        }`;
-    }
-};
+import { handleSearch } from '../js/handleSearch.jsx';
 
 export default function () {
     return (
