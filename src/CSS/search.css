@@ -53,24 +53,36 @@ body {
     top: 15%;
     left: 5%;
     width: 75vw;
-    display: flex;
+    display: grid;
+    grid-gap: 2vh;
+
 }
 
 .resultBox{
     background-color: #1c1c1c;
     border-radius: 30px;
     width: 40vw;
-    height: 15vh;
+    height: 17vh;
 }
 
 .resultText{
     color: #fff;
-    font-size: 1.5vw;
+    font-size: 1vw;
     font-family: Manrope;
     margin-top: 1vh;
     margin-left: 2vw;
+    margin-right: 2vw;
+    margin-bottom: 1vh;
 }
 
 .resultTitle{
-    font-size: 2vw;
+    font-size: 1.5vw;
+}
+
+a:link{
+    color: #8ab4f7;
+}
+
+a:link :visited{
+    color: #c589f9;
 }

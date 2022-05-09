@@ -17,14 +17,9 @@ if (!query) {
 }
 
 async function fetchResults(searchQuery) {
-    return await fetch(
-        `https://cors-proxy.aspy.workers.dev?https://api.duckduckgo.com/?q=${searchQuery}&format=json&no_redirect=1`,
-    )
-        // We need a cors proxy because the duckduckgo api doesn't allow cross-origin requests for some inane reason. I don't know why.
-        // I route it through a cloudflare worker. This is a bit of a hack, but it works. The code for the worker wasn't written by me.
-        // Although CORS Proxies are inherently insecure, we aren't using them to route sensitive data.
+    return await fetch(`https://api.duckduckno.com/${searchQuery}`)
         .then((response) => response.json())
-        .then((data) => data.RelatedTopics);
+        .then((data) => data.results);
 }
 
 const results = await fetchResults(query);
@@ -35,9 +30,9 @@ function Result(props) {
         <div className='resultBox'>
             <div className='resultText'>
                 <div className='resultTitle'>
-                    <a href={props.FirstURL}>{props.Text}</a>
+                    <a href={props.link}>{props.title}</a>
                 </div>
-                <div className='resultSnippet'>{props.Abstract}</div>
+                <div className='resultSnippet'>{props.snippet}</div>
             </div>
         </div>
     );
@@ -66,7 +61,14 @@ export default () => {
                 </div>
             </div>
             <div className='results'>
-                <Result FirstURL={results[0].FirstURL} />
+                {results.map((result) => (
+                    <Result
+                        key={result.title}
+                        title={result.title}
+                        link={result.link}
+                        snippet={result.snippet}
+                    />
+                ))}
             </div>
         </>
     );
