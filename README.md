@@ -1,2 +1,5 @@
-# duckduckno.com
-Repository for the domain duckduckno.com
+# DuckDuckNo
+
+This repository contains the frontend for duckduckno.com.
+
+[the backend can be found here](https://github.com/SomeAspy/DuckDuckNo)
