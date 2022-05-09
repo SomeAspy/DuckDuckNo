@@ -24,6 +24,11 @@ export default function () {
                     autofocus
                     onKeyPress={handleSearch}></input>
             </div>
+            <div className='footer'>
+                <a href='https://github.com/SomeAspy'>Made by SomeAspy</a>
+                <br />
+                <a href='https://github.com/SomeAspy/DuckDuckNo'>View Source</a>
+            </div>
         </>
     );
 }
