@@ -56,10 +56,6 @@ body {
     text-align: center;
 }
 
-a:link{
-    color: #fff;
-}
-
-a:link :visited {
+a{
     color: #fff;
 }
