@@ -11,19 +11,27 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
 });
 const query = params.q;
+let page = params.p;
 
 if (!query) {
     window.location.replace('/');
 }
 
+if (!page || page < 0) {
+    window.location.replace(`/search?q=${query}&p=0`);
+}
+if (page > 9) {
+    //API only allows 10 pages
+    window.location.replace(`/search?q=${query}&p=9`);
+}
+
 async function fetchResults(searchQuery) {
-    return await fetch(`https://api.duckduckno.com/${searchQuery}`)
+    return await fetch(`https://api.duckduckno.com/${searchQuery}/${page}`)
         .then((response) => response.json())
         .then((data) => data.results);
 }
 
 const results = await fetchResults(query);
-console.log(results);
 
 function Result(props) {
     return (
