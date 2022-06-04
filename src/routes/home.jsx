@@ -19,7 +19,7 @@ export default function () {
                     className='search'
                     type='text'
                     name='userSearch'
-                    placeholder='Search The Web For Anything'
+                    placeholder='Search The Web'
                     id='userSearch'
                     autofocus
                     onKeyPress={handleSearch}></input>
