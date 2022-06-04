@@ -86,3 +86,37 @@ a:link{
 a:link :visited{
     color: #c589f9;
 }
+
+.pages{
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: Manrope;
+    font-size: 1.5vw;
+    display:flex;
+    bottom: 1%;
+}
+
+
+@media screen and (max-width: 600px) {
+    .resultBox{
+        width: 80vw;
+        height: 15vh;
+    }
+    .resultText{
+        font-size: 3vw;
+    }
+    .resultTitle{
+        font-size: 5vw;
+    }
+
+    .search{
+        left: 55%;
+    }
+    .search input{
+        width: 70vw;
+        height: 5vh;
+        font-size: 4vw;
+    }
+}

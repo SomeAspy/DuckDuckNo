@@ -59,3 +59,10 @@ body {
 a{
     color: #fff;
 }
+
+@media screen and (max-width: 600px){
+    .footer{
+        bottom:10%;
+        left:53%; /* Jank */
+    }
+}
