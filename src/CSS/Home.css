@@ -1,0 +1,33 @@
+body {
+    background-color: #000;
+}
+
+.logo-element {
+    position:absolute;
+    transform:translate(-50%,-50%);
+    top: 30vh;
+    left: 50vw;
+    width: 25vh;
+}
+
+.logo-text {
+    color: #fff;
+    text-align: center;
+    font-family: Manrope, sans-serif;
+
+}
+
+.logo-container:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.logo-container:active{
+    animation-name: spin;
+    animation-duration: 1s;
+}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
