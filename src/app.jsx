@@ -4,7 +4,7 @@
 // https://opensource.org/licenses/MIT
 import { render } from 'solid-js/web';
 import { lazy } from 'solid-js';
-import { Route, Router, Routes } from 'solid-app-router';
+import { Route, Router, Routes } from '@solidjs/router';
 
 const Home = lazy(() => import('./routes/home.jsx'));
 const Search = lazy(() => import('./routes/search.jsx'));

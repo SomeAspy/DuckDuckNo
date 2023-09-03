@@ -26,9 +26,11 @@ if (page > 10) {
 }
 
 async function fetchResults(searchQuery) {
-    return await fetch(`https://api.duckduckno.com/${searchQuery}/${page - 1}`) // minus 1 because the api starts at 0
+    return await fetch(
+        `https://api.duckduckno.com/search?q=${searchQuery}&p=${page - 1}`,
+    ) // minus 1 because the api starts at 0
         .then((response) => response.json())
-        .then((data) => data.results);
+        .then((data) => data.data);
 }
 
 const results = await fetchResults(query);
