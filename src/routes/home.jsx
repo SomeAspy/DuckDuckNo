@@ -1,8 +1,3 @@
-// Copyright (c) 2022 Aiden Baker
-//
-// This software is released under the MIT License.
-// https://opensource.org/licenses/MIT
-
 import '../CSS/home.css';
 import logo from '../assets/logo.svg';
 import { handleSearch } from '../js/handleSearch.jsx';
@@ -22,7 +17,7 @@ export default function () {
                     placeholder='Search The Web'
                     id='userSearch'
                     autofocus
-                    onKeyPress={handleSearch}></input>
+                    onKeyDown={handleSearch}></input>
             </div>
             <div className='footer'>
                 <a href='https://github.com/SomeAspy'>Made by SomeAspy</a>

@@ -1,8 +1,3 @@
-// Copyright (c) 2022 Aiden Baker
-//
-// This software is released under the MIT License.
-// https://opensource.org/licenses/MIT
-
 import '../CSS/search.css';
 import logo from '../assets/logo.svg';
 import { handleSearch } from '../js/handleSearch.jsx';
@@ -66,7 +61,7 @@ export default () => {
                         name='userSearch'
                         placeholder='Search The Web For Anything'
                         id='userSearch'
-                        onKeyPress={handleSearch}
+                        onKeyDown={handleSearch}
                     />
                 </div>
             </div>
