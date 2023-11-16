@@ -1,8 +1,8 @@
-import { JSX } from 'solid-js';
-import '../CSS/Home.css'
+import { JSX } from "solid-js";
+import "../CSS/Home.css";
 
-import Logo from '../assets/logo-optimized.svg'
-import handleSearch from '../TS/search'
+import Logo from "../assets/logo-optimized.svg";
+//import handleSearch from "../TS/search";
 
 export default function Home(): JSX.Element{
 
@@ -25,5 +25,5 @@ export default function Home(): JSX.Element{
                 />
             </div>
         </>
-    )
+    );
 }
