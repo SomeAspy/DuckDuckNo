@@ -1,3 +1,4 @@
+import { For } from "solid-js";
 import "../CSS/search.css";
 import logo from "../assets/logo.svg";
 import { handleSearch } from "../js/handleSearch.jsx";
@@ -32,12 +33,12 @@ const results = await fetchResults(query);
 
 function Result(props) {
     return (
-        <div className="result-box">
-            <div className="result-text">
-                <div className="result-title">
+        <div class="result-box">
+            <div class="result-text">
+                <div class="result-title">
                     <a href={props.link}>{props.title}</a>
                 </div>
-                <div className="resultSnippet">{props.snippet}</div>
+                <div class="resultSnippet">{props.snippet}</div>
             </div>
         </div>
     );
@@ -46,17 +47,17 @@ function Result(props) {
 export default () => {
     return (
         <>
-            <div className="navbar">
+            <div class="navbar">
                 <a href="/">
                     <img
-                        className="logo"
+                        class="logo"
                         src={logo}
                         alt="Upside down DuckDuckGo logo"
                     />
                 </a>
-                <div className="search">
+                <div class="search">
                     <input
-                        className="search"
+                        class="search"
                         type="text"
                         name="userSearch"
                         placeholder="Search The Web For Anything"
@@ -65,15 +66,15 @@ export default () => {
                     />
                 </div>
             </div>
-            <div className="results">
-                {results.map((result) => (
+            <div class="results">
+                <For each={results}>{(result) => (
                     <Result
                         key={result.title}
                         title={result.title}
                         link={result.link}
                         snippet={result.snippet}
                     />
-                ))}
+                )}</For>
             </div>
             {/*
             <div className='pages'>

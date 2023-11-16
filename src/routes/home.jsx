@@ -5,21 +5,21 @@ import { handleSearch } from "../js/handleSearch.jsx";
 export default function () {
     return (
         <>
-            <div className="logo">
+            <div class="logo">
                 <img src={logo} alt="Upside down DuckDuckGo logo" />
-                <h1 className="logo-text">Duck Duck No</h1>
+                <h1 class="logo-text">Duck Duck No</h1>
             </div>
-            <div className="search">
+            <div class="search">
                 <input
-                    className="search"
+                    class="search"
                     type="text"
                     name="userSearch"
                     placeholder="Search The Web"
                     id="userSearch"
                     autofocus
-                    onKeyDown={handleSearch}></input>
+                    onKeyDown={handleSearch} />
             </div>
-            <div className="footer">
+            <div class="footer">
                 <a href="https://github.com/SomeAspy">Made by SomeAspy</a>
                 <br />
                 <a href="https://github.com/SomeAspy/DuckDuckNo">View Source</a>
