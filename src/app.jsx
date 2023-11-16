@@ -1,9 +1,9 @@
-import { render } from 'solid-js/web';
-import { lazy } from 'solid-js';
-import { Route, Router, Routes } from '@solidjs/router';
+import { render } from "solid-js/web";
+import { lazy } from "solid-js";
+import { Route, Router, Routes } from "@solidjs/router";
 
-const Home = lazy(() => import('./routes/home.jsx'));
-const Search = lazy(() => import('./routes/search.jsx'));
+const Home = lazy(() => import("./routes/home.jsx"));
+const Search = lazy(() => import("./routes/search.jsx"));
 
 render(
     () => (
@@ -14,5 +14,5 @@ render(
             </Routes>
         </Router>
     ),
-    document.getElementById('app'),
+    document.getElementById("app"),
 );

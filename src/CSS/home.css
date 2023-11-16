@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
-
 body {
     background-color: #000;
 }
@@ -12,10 +10,10 @@ body {
 
 }
 
-.logoText{
+.logo-text{
     text-align: center;
     color: #fff;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     margin-bottom: 5vh;
     margin-top:2vh;
 }
@@ -35,7 +33,7 @@ body {
     background-color: #1c1c1c;
     color: #fff;
     font-size: 1.5rem;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     text-align: center;
 }
 
@@ -45,7 +43,7 @@ body {
     bottom:1%;
     left: 50%;
     color:#fff;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     text-align: center;
 }
 
@@ -53,7 +51,7 @@ a{
     color: #fff;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (width<=600px){
     .footer{
         bottom:10%;
         left:53%; /* Jank */

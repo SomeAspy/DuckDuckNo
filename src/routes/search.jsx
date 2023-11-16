@@ -1,6 +1,6 @@
-import '../CSS/search.css';
-import logo from '../assets/logo.svg';
-import { handleSearch } from '../js/handleSearch.jsx';
+import "../CSS/search.css";
+import logo from "../assets/logo.svg";
+import { handleSearch } from "../js/handleSearch.jsx";
 
 const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
@@ -9,7 +9,7 @@ const query = params.q;
 let page = parseInt(params.p);
 
 if (!query) {
-    window.location.replace('/');
+    window.location.replace("/");
 }
 
 if (!page || page < 1) {
@@ -32,12 +32,12 @@ const results = await fetchResults(query);
 
 function Result(props) {
     return (
-        <div className='resultBox'>
-            <div className='resultText'>
-                <div className='resultTitle'>
+        <div className="result-box">
+            <div className="result-text">
+                <div className="result-title">
                     <a href={props.link}>{props.title}</a>
                 </div>
-                <div className='resultSnippet'>{props.snippet}</div>
+                <div className="resultSnippet">{props.snippet}</div>
             </div>
         </div>
     );
@@ -46,26 +46,26 @@ function Result(props) {
 export default () => {
     return (
         <>
-            <div className='navbar'>
-                <a href='/'>
+            <div className="navbar">
+                <a href="/">
                     <img
-                        className='logo'
+                        className="logo"
                         src={logo}
-                        alt='Upside down DuckDuckGo logo'
+                        alt="Upside down DuckDuckGo logo"
                     />
                 </a>
-                <div className='search'>
+                <div className="search">
                     <input
-                        className='search'
-                        type='text'
-                        name='userSearch'
-                        placeholder='Search The Web For Anything'
-                        id='userSearch'
+                        className="search"
+                        type="text"
+                        name="userSearch"
+                        placeholder="Search The Web For Anything"
+                        id="userSearch"
                         onKeyDown={handleSearch}
                     />
                 </div>
             </div>
-            <div className='results'>
+            <div className="results">
                 {results.map((result) => (
                     <Result
                         key={result.title}
