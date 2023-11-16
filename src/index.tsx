@@ -1,8 +1,8 @@
-import { render } from 'solid-js/web';
-import { Router, Routes, Route } from '@solidjs/router';
-import { lazy } from 'solid-js'
+import { render } from "solid-js/web";
+import { Router, Routes, Route } from "@solidjs/router";
+import { lazy } from "solid-js";
 
-const Home = lazy(()=>import('./routes/Home'))
+const Home = lazy(()=>import("./routes/Home"));
 
 render(
     () => (
@@ -12,5 +12,5 @@ render(
             </Routes>
         </Router>
     ),
-    document.getElementById('root')!
-)
+    document.getElementById("root")!
+);

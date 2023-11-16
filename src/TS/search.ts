@@ -1,3 +1,3 @@
 export function handleSearch() {
-    console.log('search started');
+    console.log("search started");
 }
