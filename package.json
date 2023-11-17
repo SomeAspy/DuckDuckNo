@@ -4,7 +4,7 @@
 		"dev": "vite",
 		"build": "vite build",
 		"serve": "vite preview",
-		"lint": "eslint -c .eslintrc.json \"**/*.{ts,tsx}\"",
+		"lint": "eslint -c .eslintrc.json \"**/*.{js,jsx}\"",
 		"csslint": "stylelint \"**/*.css\""
 	},
 	"devDependencies": {
