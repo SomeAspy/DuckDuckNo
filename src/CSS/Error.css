@@ -1,0 +1,10 @@
+.logo-container{
+    transform:rotate(130deg)
+}
+
+.error-text{
+    color:white;
+    font-family:'Public Sans', sans-serif;
+    text-align: center;
+    margin-top: 20vh;
+}

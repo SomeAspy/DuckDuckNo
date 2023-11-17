@@ -1,6 +1,6 @@
 {
     "ignoreFiles": "dist/**",
     "extends": [
-        "stylelint-config-standard-scss"
+        "stylelint-config-standard"
     ]
 }
