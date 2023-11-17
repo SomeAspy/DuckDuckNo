@@ -26,7 +26,7 @@ async function fetchResults(searchQuery) {
         `https://api.duckduckno.com/search?q=${searchQuery}&p=${page - 1}`,
     ) // minus 1 because the api starts at 0
         .then((response) => response.json())
-        .then((data) => data.data);
+        .then((data) => data.results);
 }
 
 const results = await fetchResults(query);
