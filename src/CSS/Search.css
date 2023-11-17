@@ -1,0 +1,39 @@
+body {
+    background-color: #14141b;
+    overflow-x: hidden;
+}
+
+.logo-element {
+    width: 6vh;
+    margin-left: 1vw;
+}
+
+.navbar {
+    pointer-events: all;
+    flex-wrap:wrap;
+    position: absolute;
+    top: 0;
+    margin-left:-1vw;
+    width: 102vw;
+    display: flex;
+    justify-content: left;
+    background-color: #141414;
+    align-items: center;
+}
+
+.page-button {
+    color:#FFF;
+    font-size: 3cqh;
+    margin:2vh
+}
+
+.search input{
+    text-align: center;
+    background-color: #000;
+    color:#FFF;
+    border:none;
+    border-radius: 15px;
+    width: 25vw;
+    margin: 1vw;
+    font-size: 1.5cqh;
+}

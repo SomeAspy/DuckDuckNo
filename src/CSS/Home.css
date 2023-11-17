@@ -1,19 +1,24 @@
 body {
-    background-color: #000;
+    background-color: #14141b;
+    overflow-x:hidden;
 }
 
 .logo-element {
     position:absolute;
-    transform:translate(-50%,-50%);
-    top: 30vh;
+    top: 5vh;
     left: 50vw;
-    width: 25vh;
+    width: 30vh;
+    transform: translateX(-50%);
 }
 
-.logo-text {
+.title {
     color: #fff;
     text-align: center;
-    font-family: Manrope, sans-serif;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 5cqh;
+    width: 100vw;
+    align-self:center;
+    margin-top: 35vh;
 
 }
 
@@ -22,12 +27,18 @@ body {
     transition: 0.5s;
 }
 
-.logo-container:active{
-    animation-name: spin;
-    animation-duration: 1s;
-}
-
-@keyframes spin {
-    from {transform:rotate(0deg);}
-    to {transform: rotate(360deg);}
+.search input{
+    position: absolute;
+    top:50vh;
+    left:50%;
+    transform: translateX(-50%);
+    width:80cqw;
+    height:6vh;
+    font-family: Manrope, sans-serif;
+    font-size: 2rem;
+    border-radius: 50px;
+    background-color: #1c1c1c;
+    color:#fff;
+    text-align: center;
+    border:none;
 }
