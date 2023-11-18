@@ -23,7 +23,7 @@
 		"vite-plugin-webfont-dl": "^3.9.1"
 	},
 	"dependencies": {
-		"@solidjs/router": "^0.8.4",
+		"@solidjs/router": "^0.9.1",
 		"solid-js": "^1.8.5"
 	}
 }
