@@ -8,6 +8,7 @@
 		"csslint": "stylelint \"**/*.css\""
 	},
 	"devDependencies": {
+		"@solidjs/router": "^0.9.1",
 		"@typescript-eslint/eslint-plugin": "^6.11.0",
 		"@typescript-eslint/parser": "^6.11.0",
 		"eslint": "^8.54.0",
@@ -23,7 +24,6 @@
 		"vite-plugin-webfont-dl": "^3.9.1"
 	},
 	"dependencies": {
-		"@solidjs/router": "^0.8.4",
 		"solid-js": "^1.8.5"
 	}
 }
