@@ -24,6 +24,6 @@
 		"vite-plugin-webfont-dl": "^3.9.1"
 	},
 	"dependencies": {
-		"solid-js": "^1.8.5"
+		"solid-js": "^1.8.6"
 	}
 }
