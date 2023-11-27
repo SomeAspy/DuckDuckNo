@@ -38,20 +38,20 @@ devDependencies:
     specifier: ^5.2.2
     version: 5.2.2
   vite:
-    specifier: ^5.0.0
-    version: 5.0.0
+    specifier: ^5.0.2
+    version: 5.0.2
   vite-plugin-compression:
     specifier: ^0.5.1
-    version: 0.5.1(vite@5.0.0)
+    version: 0.5.1(vite@5.0.2)
   vite-plugin-solid:
     specifier: ^2.7.2
-    version: 2.7.2(solid-js@1.8.5)(vite@5.0.0)
+    version: 2.7.2(solid-js@1.8.5)(vite@5.0.2)
   vite-plugin-solid-svg:
     specifier: ^0.7.0
-    version: 0.7.0(solid-js@1.8.5)(vite@5.0.0)
+    version: 0.7.0(solid-js@1.8.5)(vite@5.0.2)
   vite-plugin-webfont-dl:
     specifier: ^3.9.1
-    version: 3.9.1(vite@5.0.0)
+    version: 3.9.1(vite@5.0.2)
 
 packages:
 
@@ -3416,7 +3416,7 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite-plugin-compression@0.5.1(vite@5.0.0):
+  /vite-plugin-compression@0.5.1(vite@5.0.2):
     resolution: {integrity: sha512-5QJKBDc+gNYVqL/skgFAP81Yuzo9R+EAf19d+EtsMF/i8kFUpNi3J/H01QD3Oo8zBQn+NzoCIFkpPLynoOzaJg==}
     peerDependencies:
       vite: '>=2.0.0'
@@ -3424,12 +3424,12 @@ packages:
       chalk: 4.1.2
       debug: 4.3.4
       fs-extra: 10.1.0
-      vite: 5.0.0
+      vite: 5.0.2
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /vite-plugin-solid-svg@0.7.0(solid-js@1.8.5)(vite@5.0.0):
+  /vite-plugin-solid-svg@0.7.0(solid-js@1.8.5)(vite@5.0.2):
     resolution: {integrity: sha512-skErWSlCdI/NbrnyFQJWQk8RWjtRQGfknm1FjIgW190osiyVIZLWnQyT2ErV92ru9p5FjFgA4L482Y7ZBPcRzA==}
     peerDependencies:
       solid-js: ^1
@@ -3437,10 +3437,10 @@ packages:
     dependencies:
       solid-js: 1.8.5
       svgo: 3.0.3
-      vite: 5.0.0
+      vite: 5.0.2
     dev: true
 
-  /vite-plugin-solid@2.7.2(solid-js@1.8.5)(vite@5.0.0):
+  /vite-plugin-solid@2.7.2(solid-js@1.8.5)(vite@5.0.2):
     resolution: {integrity: sha512-GV2SMLAibOoXe76i02AsjAg7sbm/0lngBlERvJKVN67HOrJsHcWgkt0R6sfGLDJuFkv2aBe14Zm4vJcNME+7zw==}
     peerDependencies:
       solid-js: ^1.7.2
@@ -3453,13 +3453,13 @@ packages:
       merge-anything: 5.1.7
       solid-js: 1.8.5
       solid-refresh: 0.5.3(solid-js@1.8.5)
-      vite: 5.0.0
-      vitefu: 0.2.5(vite@5.0.0)
+      vite: 5.0.2
+      vitefu: 0.2.5(vite@5.0.2)
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /vite-plugin-webfont-dl@3.9.1(vite@5.0.0):
+  /vite-plugin-webfont-dl@3.9.1(vite@5.0.2):
     resolution: {integrity: sha512-nr6UN0Y9ZDbtjwe0/3j+w5VdQCeYWjsgx3IaHg2EvhhbgDM44wmJLQ2ecHWduo0o+PJEmBJK6QhST6z7qxKwnA==}
     peerDependencies:
       vite: ^2 || ^3 || ^4 || ^5
@@ -3468,13 +3468,13 @@ packages:
       clean-css: 5.3.2
       flat-cache: 3.2.0
       picocolors: 1.0.0
-      vite: 5.0.0
+      vite: 5.0.2
     transitivePeerDependencies:
       - debug
     dev: true
 
-  /vite@5.0.0:
-    resolution: {integrity: sha512-ESJVM59mdyGpsiNAeHQOR/0fqNoOyWPYesFto8FFZugfmhdHx8Fzd8sF3Q/xkVhZsyOxHfdM7ieiVAorI9RjFw==}
+  /vite@5.0.2:
+    resolution: {integrity: sha512-6CCq1CAJCNM1ya2ZZA7+jS2KgnhbzvxakmlIjN24cF/PXhRMzpM/z8QgsVJA/Dm5fWUWnVEsmtBoMhmerPxT0g==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -3508,7 +3508,7 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitefu@0.2.5(vite@5.0.0):
+  /vitefu@0.2.5(vite@5.0.2):
     resolution: {integrity: sha512-SgHtMLoqaeeGnd2evZ849ZbACbnwQCIwRH57t18FxcXoZop0uQu0uzlIhJBlF/eWVzuce0sHeqPcDo+evVcg8Q==}
     peerDependencies:
       vite: ^3.0.0 || ^4.0.0 || ^5.0.0
@@ -3516,7 +3516,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 5.0.0
+      vite: 5.0.2
     dev: true
 
   /which-boxed-primitive@1.0.2:
