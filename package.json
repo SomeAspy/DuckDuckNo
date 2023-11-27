@@ -10,7 +10,7 @@
 	"devDependencies": {
 		"@solidjs/router": "^0.9.1",
 		"@typescript-eslint/eslint-plugin": "^6.11.0",
-		"@typescript-eslint/parser": "^6.11.0",
+		"@typescript-eslint/parser": "^6.12.0",
 		"eslint": "^8.54.0",
 		"eslint-plugin-jsx-a11y": "^6.8.0",
 		"eslint-plugin-solid": "^0.13.0",
