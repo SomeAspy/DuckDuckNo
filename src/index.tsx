@@ -1,5 +1,5 @@
 import { render } from "solid-js/web";
-import { Router, Routes, Route } from "@solidjs/router";
+import { Router, Route } from "@solidjs/router";
 import { lazy } from "solid-js";
 
 const Home = lazy(() => import("./routes/Home"));
@@ -9,11 +9,9 @@ const ErrorPage = lazy(() => import("./routes/Error"));
 render(
     () => (
         <Router>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/search" element={<Search />} />
-                <Route path="/error" element={<ErrorPage/>}/>
-            </Routes>
+            <Route path="/" component={Home} />
+            <Route path="/search" component={Search} />
+            <Route path="/error" component={ErrorPage}/>
         </Router>
     ),
     document.getElementById("root")!
