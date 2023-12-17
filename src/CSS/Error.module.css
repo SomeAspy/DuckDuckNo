@@ -1,8 +1,10 @@
-.logo-container{
+@import url("./Home.module.css");
+
+.logoContainer{
     transform:rotate(130deg)
 }
 
-.error-text{
+.errorText{
     color:white;
     font-family:'Public Sans', sans-serif;
     text-align: center;

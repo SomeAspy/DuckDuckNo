@@ -3,7 +3,7 @@ body {
     overflow-x: hidden;
 }
 
-.logo-element {
+.logoElement {
     width: 6vh;
     margin-left: 1vw;
 }
@@ -21,7 +21,7 @@ body {
     align-items: center;
 }
 
-.page-button {
+.pageButton {
     color:#FFF;
     font-size: 3cqh;
     margin:2vh
@@ -36,4 +36,13 @@ body {
     width: 25vw;
     margin: 1vw;
     font-size: 1.5cqh;
+}
+
+.results {
+    position: absolute;
+    top: 10vh;
+    left: 5%;
+    width: 75vw;
+    display: grid;
+    grid-gap: 2vh;
 }

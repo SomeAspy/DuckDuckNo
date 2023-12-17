@@ -1,8 +1,8 @@
 import { For, JSX } from "solid-js";
-import "../CSS/Search.css";
+import styles from "../CSS/Search.module.css";
 
-import FooterComponent from "../assets/components/footer/footer.component";
-import ResultComponent from "../assets/components/result/result.component";
+import Footer from "../assets/components/footer/footer";
+import ResultComponent from "../assets/components/result/result";
 import Logo from "../assets/logo-optimized.svg";
 
 import handleSearch from "../scripts/searchBar";
@@ -41,13 +41,13 @@ try {
 export default function Search(): JSX.Element{
     return (
         <>
-            <div class="navbar">
-                <a class="logo-element" href="/">
+            <div class={styles.navbar}>
+                <a class={styles.logoElement} href="/">
                     <Logo />
                 </a>
-                <div class='search'>
+                <div class={styles.search}>
                     <input
-                        class='search'
+                        class={styles.search}
                         type='text'
                         name='search'
                         placeholder='Search The Web'
@@ -55,15 +55,15 @@ export default function Search(): JSX.Element{
                         onKeyDown={(event: KeyboardEvent) => handleSearch(event)}
                     />
                 </div>
-                <a class="page-button" href={`/search?q=${params.q}&p=${params.p-1}`}>
+                <a class={styles.pageButton} href={`/search?q=${params.q}&p=${params.p-1}`}>
                     &lt;
                 </a>
                 {/*This is cursed. If we do not do it this way 1 is APPENDED instead of ADDED*/}
-                <a class="page-button" href={`/search?q=${params.q}&p=${parseInt(params.p.toString())+1}`}>
+                <a class={styles.pageButton} href={`/search?q=${params.q}&p=${parseInt(params.p.toString())+1}`}>
                     &gt;
                 </a>
             </div>
-            <div class="results">
+            <div class={styles.results}>
                 <For each={results}>{(result) => (
                     <ResultComponent
                         title={result.title}
@@ -72,7 +72,7 @@ export default function Search(): JSX.Element{
                     />
                     )}</For>
                 </div>
-            <FooterComponent github="Search.tsx"/>
+            <Footer github="Search.tsx"/>
         </>
     );
 }

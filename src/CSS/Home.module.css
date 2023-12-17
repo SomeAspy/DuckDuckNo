@@ -3,7 +3,7 @@ body {
     overflow-x:hidden;
 }
 
-.logo-element {
+.logoElement {
     position:absolute;
     top: 5vh;
     left: 50vw;
@@ -22,7 +22,7 @@ body {
 
 }
 
-.logo-container:hover {
+.logoContainer:hover {
     transform: scale(1.2);
     transition: 0.5s;
 }
