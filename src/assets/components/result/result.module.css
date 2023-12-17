@@ -1,20 +1,11 @@
-.results {
-    position: absolute;
-    top: 10vh;
-    left: 5%;
-    width: 75vw;
-    display: grid;
-    grid-gap: 2vh;
-}
-
-.result-box{
+.resultBox{
     width: fit-content;
     height: fit-content;
     min-height: 15vh;
     margin-bottom: -1vh;
 }
 
-.result-text{
+.resultText{
     color: #fff;
     font-family: Manrope, sans-serif;
     margin-top: 1vh;
@@ -23,7 +14,7 @@
     font-size: 2.5cqh;
 }
 
-.result-title{
+.result{
     font-size: 3cqh;
     color:cornflowerblue
 }

@@ -1,22 +1,22 @@
 import { JSX } from "solid-js";
-import "../CSS/Home.css";
+import styles from "../CSS/Home.module.css";
 
 import Logo from "../assets/logo-optimized.svg";
-import FooterComponent from "../assets/components/footer/footer.component";
+import Footer from "../assets/components/footer/footer";
 import handleSearch from "../scripts/searchBar";
 
 export default function Home(): JSX.Element{
     return (
         <>
-            <div class='logo-element'>
-                <div class='logo-container' >
+            <div class={styles.logoElement}>
+                <div class={styles.logoContainer} >
                         <Logo/>
                     </div>
             </div>
-            <h1 class='title'>Duck Duck No</h1>
-            <div class='search'>
+            <h1 class={styles.title}>Duck Duck No</h1>
+            <div class={styles.search}>
                 <input
-                    class='search'
+                    class={styles.search}
                     type='text'
                     name='search'
                     placeholder='Search The Web'
@@ -25,7 +25,7 @@ export default function Home(): JSX.Element{
                     onKeyDown={(event: KeyboardEvent) => handleSearch(event)}
                 />
             </div>
-            <FooterComponent github="Home.tsx"/>
+            <Footer github="Home.tsx"/>
         </>
     );
 }

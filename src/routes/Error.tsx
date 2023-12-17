@@ -1,23 +1,23 @@
 import { JSX } from "solid-js";
-import "../CSS/Home.css";
-import "../CSS/Error.css";
+
+import styles from "../CSS/Error.module.css";
 
 import Logo from "../assets/logo-optimized.svg";
-import FooterComponent from "../assets/components/footer/footer.component";
+import Footer from "../assets/components/footer/footer";
 import handleSearch from "../scripts/searchBar";
 
 export default function ErrorPage(): JSX.Element{
     return (
         <>
-            <div class='logo-element'>
-                <div class='logo-container' >
+            <div class={styles.logoElement}>
+                <div class={styles.logoContainer} >
                         <Logo/>
                     </div>
             </div>
-            <h1 class='title'>Duck Duck- Oh No!</h1>
-            <div class='search'>
+            <h1 class={styles.title}>Duck Duck- Oh No!</h1>
+            <div class={styles.search}>
                 <input
-                    class='search'
+                    class={styles.search}
                     type='text'
                     name='search'
                     placeholder='Maybe try again?'
@@ -26,11 +26,11 @@ export default function ErrorPage(): JSX.Element{
                     onKeyDown={(event: KeyboardEvent) => handleSearch(event)}
                 />
             </div>
-            <div class="error-text">
+            <div class={styles.errorText}>
                 Something went wrong! If this continues to happen, open an issue at<br />
                 <a href="https://github.com/someaspy/duckduckno/issues/new">https://github.com/someaspy/duckduckno/issues/new</a>!
             </div>
-            <FooterComponent github="Home.tsx"/>
+            <Footer github="Home.tsx"/>
         </>
     );
 }

@@ -11,7 +11,7 @@ render(
         <Router>
             <Route path="/" component={Home} />
             <Route path="/search" component={Search} />
-            <Route path="/error" component={ErrorPage}/>
+            <Route path="/*" component={ErrorPage}/>
         </Router>
     ),
     document.getElementById("root")!
