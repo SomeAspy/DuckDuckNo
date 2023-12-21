@@ -1,4 +1,4 @@
-# DuckDuckNo [![License: CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+# DuckDuckNo
 
 >A search engine powered by [Google CSE API](https://developers.google.com/custom-search/v1/overview)
 
