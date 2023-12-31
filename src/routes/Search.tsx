@@ -58,8 +58,7 @@ export default function Search(): JSX.Element{
                 <a class={styles.pageButton} href={`/search?q=${params.q}&p=${params.p-1}`}>
                     &lt;
                 </a>
-                {/*This is cursed. If we do not do it this way 1 is APPENDED instead of ADDED*/}
-                <a class={styles.pageButton} href={`/search?q=${params.q}&p=${parseInt(params.p.toString())+1}`}>
+                <a class={styles.pageButton} href={`/search?q=${params.q}&p=${+params.p+1}`}>
                     &gt;
                 </a>
             </div>
