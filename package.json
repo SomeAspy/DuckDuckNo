@@ -8,8 +8,8 @@
 		"csslint": "stylelint \"**/*.css\""
 	},
 	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "^6.19.0",
-		"@typescript-eslint/parser": "^6.19.0",
+		"@typescript-eslint/eslint-plugin": "^6.19.1",
+		"@typescript-eslint/parser": "^6.19.1",
 		"eslint": "^8.56.0",
 		"eslint-plugin-jsx-a11y": "^6.8.0",
 		"eslint-plugin-solid": "^0.13.1",
@@ -17,12 +17,12 @@
 		"stylelint-config-standard": "^36.0.0",
 		"typescript": "^5.3.3",
 		"vite": "^5.0.12",
-		"vite-plugin-solid": "^2.8.2",
+		"vite-plugin-solid": "^2.9.1",
 		"vite-plugin-solid-svg": "^0.8.0",
 		"vite-plugin-webfont-dl": "^3.9.1"
 	},
 	"dependencies": {
-		"@solidjs/router": "^0.10.9",
-		"solid-js": "^1.8.11"
+		"@solidjs/router": "^0.10.10",
+		"solid-js": "^1.8.12"
 	}
 }
