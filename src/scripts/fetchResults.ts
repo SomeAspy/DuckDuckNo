@@ -8,6 +8,7 @@ export default async function (query: SearchParameters): Promise<Result[]> {
         .then((response) => response.json() as unknown as ApiResponse)
         .then((data) => {
             if (data.code != 200 || data.results.length == 0) {
+                console.error(data);
                 throw new Error("API Fault");
             }
             return data.results;
