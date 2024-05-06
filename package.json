@@ -16,7 +16,7 @@
 		"stylelint": "^16.4.0",
 		"stylelint-config-standard": "^36.0.0",
 		"typescript": "^5.4.5",
-		"vite": "^5.2.10",
+		"vite": "^5.2.11",
 		"vite-plugin-solid": "^2.10.2",
 		"vite-plugin-solid-svg": "^0.8.1",
 		"vite-plugin-webfont-dl": "^3.9.4"
