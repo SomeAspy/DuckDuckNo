@@ -1,4 +1,4 @@
-export type SearchParameters = {
+export interface SearchParameters {
     q: string;
     p: number;
-};
+}
