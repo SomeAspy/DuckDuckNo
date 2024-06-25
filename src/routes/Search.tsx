@@ -1,4 +1,4 @@
-import { For, JSX } from "solid-js";
+import {For, JSX} from "solid-js";
 import styles from "../CSS/Search.module.css";
 
 import Footer from "../assets/components/footer/footer";
@@ -8,8 +8,8 @@ import Logo from "../assets/logo-optimized.svg";
 import handleSearch from "../scripts/searchBar";
 import fetchResults from "../scripts/fetchResults";
 
-import type { Result } from "../types/backendResponse";
-import type { SearchParameters } from "../types/Params";
+import type {Result} from "../types/backendResponse";
+import type {SearchParameters} from "../types/Params";
 
 const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop.toString())
@@ -38,7 +38,7 @@ try {
     window.location.replace("/error");
 }
 
-export default function Search(): JSX.Element{
+export default function Search(): JSX.Element {
     return (
         <>
             <div class={styles.navbar}>
@@ -48,30 +48,30 @@ export default function Search(): JSX.Element{
                 <div class={styles.search}>
                     <input
                         class={styles.search}
-                        type='text'
-                        name='search'
-                        placeholder='Search The Web'
-                        id='search'
-                        onKeyDown={(event: KeyboardEvent) => handleSearch(event)}
+                        type="text"
+                        name="search"
+                        placeholder="Search The Web"
+                        id="search"
+                        onKeyDown={(event: KeyboardEvent) => {
+                            handleSearch(event);
+                        }}
                     />
                 </div>
-                <a class={styles.pageButton} href={`/search?q=${params.q}&p=${params.p-1}`}>
+                <a class={styles.pageButton} href={`/search?q=${params.q}&p=${(params.p - 1).toString()}`}>
                     &lt;
                 </a>
-                <a class={styles.pageButton} href={`/search?q=${params.q}&p=${+params.p+1}`}>
+                <a class={styles.pageButton} href={`/search?q=${params.q}&p=${(+params.p + 1).toString()}`}>
                     &gt;
                 </a>
             </div>
             <div class={styles.results}>
-                <For each={results}>{(result) => (
-                    <ResultComponent
-                        title={result.title}
-                        description={result.snippet}
-                        url={result.link}
-                    />
-                    )}</For>
-                </div>
-            <Footer github="Search.tsx"/>
+                <For each={results}>
+                    {(result) => (
+                        <ResultComponent title={result.title} description={result.snippet} url={result.link} />
+                    )}
+                </For>
+            </div>
+            <Footer github="Search.tsx" />
         </>
     );
 }

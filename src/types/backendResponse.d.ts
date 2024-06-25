@@ -1,4 +1,4 @@
-export type Result = {
+export interface Result {
     kind: string;
     title: string;
     htmlTitle: string;
@@ -8,9 +8,9 @@ export type Result = {
     htmlSnippet: string;
     formattedUrl: string;
     htmlFormattedUrl: string;
-};
+}
 
-export type ApiResponse = {
+export interface ApiResponse {
     code: number;
     results: Result[];
-};
+}

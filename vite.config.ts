@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import {defineConfig} from "vite";
 import solidPlugin from "vite-plugin-solid";
 import webfontDownload from "vite-plugin-webfont-dl";
 import solidSvg from "vite-plugin-solid-svg";
@@ -18,19 +18,19 @@ export default defineConfig({
                         "removeDimensions",
                         "removeOffCanvasPaths",
                         "removeXMLNS",
-                        "reusePaths",
-                    ],
-                },
-            },
-        }),
+                        "reusePaths"
+                    ]
+                }
+            }
+        })
     ],
     server: {
-        port: 3000,
+        port: 3000
     },
     build: {
-        target: "esnext",
+        target: "esnext"
     },
     preview: {
-        port: 3000,
-    },
+        port: 3000
+    }
 });
