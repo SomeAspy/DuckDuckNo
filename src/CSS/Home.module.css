@@ -1,44 +1,43 @@
 body {
-    background-color: #14141b;
-    overflow-x:hidden;
+	background-color: #14141b;
+	overflow-x: hidden;
 }
 
 .logoElement {
-    position:absolute;
-    top: 5vh;
-    left: 50vw;
-    width: 30vh;
-    transform: translateX(-50%);
+	position: absolute;
+	top: 5vh;
+	left: 50vw;
+	width: 30vh;
+	transform: translateX(-50%);
 }
 
 .title {
-    color: #fff;
-    text-align: center;
-    font-family: 'Public Sans', sans-serif;
-    font-size: 5cqh;
-    width: 100vw;
-    align-self:center;
-    margin-top: 35vh;
-
+	color: #fff;
+	text-align: center;
+	font-family: "Public Sans", sans-serif;
+	font-size: 5cqh;
+	width: 100vw;
+	align-self: center;
+	margin-top: 35vh;
 }
 
 .logoContainer:hover {
-    transform: scale(1.2);
-    transition: 0.5s;
+	transform: scale(1.2);
+	transition: 0.5s;
 }
 
-.search input{
-    position: absolute;
-    top:50vh;
-    left:50%;
-    transform: translateX(-50%);
-    width:80cqw;
-    height:6vh;
-    font-family: Manrope, sans-serif;
-    font-size: 2rem;
-    border-radius: 50px;
-    background-color: #1c1c1c;
-    color:#fff;
-    text-align: center;
-    border:none;
+.search input {
+	position: absolute;
+	top: 50vh;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80cqw;
+	height: 6vh;
+	font-family: Manrope, sans-serif;
+	font-size: 2rem;
+	border-radius: 50px;
+	background-color: #1c1c1c;
+	color: #fff;
+	text-align: center;
+	border: none;
 }

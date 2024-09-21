@@ -1,4 +1,4 @@
 export interface SearchParameters {
-    q: string;
-    p: number;
+	q: string;
+	p: number;
 }
