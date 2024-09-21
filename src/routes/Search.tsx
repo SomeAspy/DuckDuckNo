@@ -1,77 +1,87 @@
-import {For, JSX} from "solid-js";
+import { For, type JSX } from "solid-js";
 import styles from "../CSS/Search.module.css";
 
 import Footer from "../assets/components/footer/footer";
 import ResultComponent from "../assets/components/result/result";
 import Logo from "../assets/logo-optimized.svg";
 
-import handleSearch from "../scripts/searchBar";
 import fetchResults from "../scripts/fetchResults";
+import handleSearch from "../scripts/searchBar";
 
-import type {Result} from "../types/backendResponse";
-import type {SearchParameters} from "../types/Params";
+import type { SearchParameters } from "../@types/Params";
+import type { Result } from "../@types/backendResponse";
 
 const params = new Proxy(new URLSearchParams(window.location.search), {
-    get: (searchParams, prop) => searchParams.get(prop.toString())
+	get: (searchParams, prop) => searchParams.get(prop.toString()),
 }) as unknown as SearchParameters;
 
 console.log(params);
 
 if (!params.q) {
-    window.location.replace("/");
+	window.location.replace("/");
 } else {
-    if (!params.p || params.p < 1) {
-        window.location.replace(`/search?q=${params.q}&p=1`);
-    }
+	if (!params.p || params.p < 1) {
+		window.location.replace(`/search?q=${params.q}&p=1`);
+	}
 
-    if (params.p > 10) {
-        // API Only allows 10 pages at the moment - this is a google limitation (https://developers.google.com/custom-search/v1/using_rest#search_request_metadata)
-        window.location.replace(`/search?q=${params.q}&p=10`);
-    }
+	if (params.p > 10) {
+		// API Only allows 10 pages at the moment - this is a google limitation (https://developers.google.com/custom-search/v1/using_rest#search_request_metadata)
+		window.location.replace(`/search?q=${params.q}&p=10`);
+	}
 }
 
 let results: Result[];
 
 try {
-    results = await fetchResults(params);
+	results = await fetchResults(params);
 } catch {
-    window.location.replace("/error");
+	window.location.replace("/error");
 }
 
 export default function Search(): JSX.Element {
-    return (
-        <>
-            <div class={styles.navbar}>
-                <a class={styles.logoElement} href="/">
-                    <Logo />
-                </a>
-                <div class={styles.search}>
-                    <input
-                        class={styles.search}
-                        type="text"
-                        name="search"
-                        placeholder="Search The Web"
-                        id="search"
-                        onKeyDown={(event: KeyboardEvent) => {
-                            handleSearch(event);
-                        }}
-                    />
-                </div>
-                <a class={styles.pageButton} href={`/search?q=${params.q}&p=${(params.p - 1).toString()}`}>
-                    &lt;
-                </a>
-                <a class={styles.pageButton} href={`/search?q=${params.q}&p=${(+params.p + 1).toString()}`}>
-                    &gt;
-                </a>
-            </div>
-            <div class={styles.results}>
-                <For each={results}>
-                    {(result) => (
-                        <ResultComponent title={result.title} description={result.snippet} url={result.link} />
-                    )}
-                </For>
-            </div>
-            <Footer github="Search.tsx" />
-        </>
-    );
+	return (
+		<>
+			<div class={styles.navbar}>
+				<a class={styles.logoElement} href="/">
+					<Logo />
+				</a>
+				<div class={styles.search}>
+					<input
+						class={styles.search}
+						type="text"
+						name="search"
+						placeholder="Search The Web"
+						id="search"
+						onKeyDown={(event: KeyboardEvent) => {
+							handleSearch(event);
+						}}
+					/>
+				</div>
+				<a
+					class={styles.pageButton}
+					href={`/search?q=${params.q}&p=${(params.p - 1).toString()}`}
+				>
+					&lt;
+				</a>
+				<a
+					class={styles.pageButton}
+					href={`/search?q=${params.q}&p=${(+params.p + 1).toString()}`}
+				>
+					&gt;
+				</a>
+			</div>
+			<div class={styles.results}>
+				<For each={results}>
+					{(result) => (
+						<ResultComponent
+							title={result.title}
+							description={result.snippet}
+							url={result.link}
+						/>
+					)}
+				</For>
+			</div>
+			<Footer github="Search.tsx" />
+		</>
+	);
 }

@@ -1,48 +1,48 @@
 body {
-    background-color: #14141b;
-    overflow-x: hidden;
+	background-color: #14141b;
+	overflow-x: hidden;
 }
 
 .logoElement {
-    width: 6vh;
-    margin-left: 1vw;
+	width: 6vh;
+	margin-left: 1vw;
 }
 
 .navbar {
-    pointer-events: all;
-    flex-wrap:wrap;
-    position: absolute;
-    top: 0;
-    margin-left:-1vw;
-    width: 102vw;
-    display: flex;
-    justify-content: left;
-    background-color: #141414;
-    align-items: center;
+	pointer-events: all;
+	flex-wrap: wrap;
+	position: absolute;
+	top: 0;
+	margin-left: -1vw;
+	width: 102vw;
+	display: flex;
+	justify-content: left;
+	background-color: #141414;
+	align-items: center;
 }
 
 .pageButton {
-    color:#FFF;
-    font-size: 3cqh;
-    margin:2vh
+	color: #fff;
+	font-size: 3cqh;
+	margin: 2vh;
 }
 
-.search input{
-    text-align: center;
-    background-color: #000;
-    color:#FFF;
-    border:none;
-    border-radius: 15px;
-    width: 25vw;
-    margin: 1vw;
-    font-size: 1.5cqh;
+.search input {
+	text-align: center;
+	background-color: #000;
+	color: #fff;
+	border: none;
+	border-radius: 15px;
+	width: 25vw;
+	margin: 1vw;
+	font-size: 1.5cqh;
 }
 
 .results {
-    position: absolute;
-    top: 10vh;
-    left: 5%;
-    width: 75vw;
-    display: grid;
-    grid-gap: 2vh;
+	position: absolute;
+	top: 10vh;
+	left: 5%;
+	width: 75vw;
+	display: grid;
+	grid-gap: 2vh;
 }

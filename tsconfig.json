@@ -1,41 +1,24 @@
 {
-    "include": [
-        "src",
-        "*.js",
-        "*.ts"
-    ],
-    "compilerOptions": {
-        "allowUnreachableCode": false,
-        "allowUnusedLabels": false,
-        "alwaysStrict": true,
-        "exactOptionalPropertyTypes": true,
-        "noImplicitAny": true,
-        "noImplicitOverride": true,
-        "noImplicitReturns": true,
-        "noImplicitThis": true,
-        "noPropertyAccessFromIndexSignature": false,
-        "noUncheckedIndexedAccess": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "strict": true,
-        "useUnknownInCatchVariables": true,
-        "target": "ESNext",
-        "module": "ESNext",
-        "moduleResolution": "Bundler",
-        "allowSyntheticDefaultImports": true,
-        "esModuleInterop": true,
-        "jsx": "preserve",
-        "jsxImportSource": "solid-js",
-        "types": [
-            "vite-plugin-solid-svg/types-component-solid",
-            "vite/client"
-        ],
-        "lib": [
-            "DOM",
-            "ESNext"
-        ],
-        "removeComments": true,
-        "noEmit": true,
-        "isolatedModules": true,
-    }
+	"include": ["src"],
+	"compilerOptions": {
+		"exactOptionalPropertyTypes": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"strict": true,
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"resolveJsonModule": true,
+		"rootDir": ".",
+		"removeComments": true,
+		"jsx": "preserve",
+		"jsxImportSource": "solid-js",
+		"types": ["vite-plugin-solid-svg/types-component-solid", "vite/client"],
+		"noEmit": true,
+		"isolatedModules": true,
+		"lib": ["DOM", "ESNext"]
+	}
 }

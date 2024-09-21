@@ -1,12 +1,12 @@
 @import url("./Home.module.css");
 
-.logoContainer{
-    transform:rotate(130deg)
+.logoContainer {
+	transform: rotate(130deg);
 }
 
-.errorText{
-    color:white;
-    font-family:'Public Sans', sans-serif;
-    text-align: center;
-    margin-top: 20vh;
+.errorText {
+	color: white;
+	font-family: "Public Sans", sans-serif;
+	text-align: center;
+	margin-top: 20vh;
 }
