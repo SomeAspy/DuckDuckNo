@@ -1,8 +1,7 @@
 import type { JSX } from "solid-js";
-import styles from "../CSS/Home.module.css";
-
 import Footer from "../assets/components/footer/footer";
 import Logo from "../assets/logo-optimized.svg";
+import styles from "../CSS/Home.module.css";
 import handleSearch from "../scripts/searchBar";
 
 export default function Home(): JSX.Element {

@@ -8,16 +8,16 @@
 		"lint:fix": "biome check --write"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.9.2",
-		"typescript": "^5.6.2",
-		"vite": "^5.4.7",
-		"vite-plugin-solid": "^2.10.2",
+		"@biomejs/biome": "^2.3.8",
+		"typescript": "^5.9.3",
+		"vite": "^7.2.4",
+		"vite-plugin-solid": "^2.11.10",
 		"vite-plugin-solid-svg": "^0.8.1",
-		"vite-plugin-webfont-dl": "^3.9.5"
+		"vite-plugin-webfont-dl": "^3.11.1"
 	},
 	"dependencies": {
-		"@solidjs/router": "^0.14.5",
-		"solid-js": "^1.8.22"
+		"@solidjs/router": "^0.15.4",
+		"solid-js": "^1.9.10"
 	},
-	"packageManager": "pnpm@9.11.0+sha512.0a203ffaed5a3f63242cd064c8fb5892366c103e328079318f78062f24ea8c9d50bc6a47aa3567cabefd824d170e78fa2745ed1f16b132e16436146b7688f19b"
+	"packageManager": "pnpm@11.0.0-dev.1005+sha512.91f84a392eea348ea4852a182912d2520273a4336f933b78cc44bc931eb999923c097e9433a9b355adc1f725725ea99082fc9f032a559df832632e764c92c798"
 }

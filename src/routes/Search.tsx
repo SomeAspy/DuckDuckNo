@@ -1,15 +1,12 @@
 import { For, type JSX } from "solid-js";
-import styles from "../CSS/Search.module.css";
-
+import type { Result } from "../@types/backendResponse";
+import type { SearchParameters } from "../@types/Params";
 import Footer from "../assets/components/footer/footer";
 import ResultComponent from "../assets/components/result/result";
 import Logo from "../assets/logo-optimized.svg";
-
+import styles from "../CSS/Search.module.css";
 import fetchResults from "../scripts/fetchResults";
 import handleSearch from "../scripts/searchBar";
-
-import type { SearchParameters } from "../@types/Params";
-import type { Result } from "../@types/backendResponse";
 
 const params = new Proxy(new URLSearchParams(window.location.search), {
 	get: (searchParams, prop) => searchParams.get(prop.toString()),

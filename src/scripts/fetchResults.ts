@@ -1,5 +1,5 @@
-import type { SearchParameters } from "../@types/Params";
 import type { ApiResponse, Result } from "../@types/backendResponse";
+import type { SearchParameters } from "../@types/Params";
 
 export default async function (query: SearchParameters): Promise<Result[]> {
 	return await fetch(
