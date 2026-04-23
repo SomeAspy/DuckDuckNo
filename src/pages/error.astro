@@ -1,0 +1,37 @@
+---
+import Logo from "../assets/logo-optimized.svg";
+import Footer from "../components/Footer.astro";
+import Searchbox from "../components/SearchBox.astro";
+import "../css/index.css";
+---
+
+<div class="logo-element">
+    <div class="logo-container">
+        <Logo />
+    </div>
+</div>
+<h1 class="title">Duck Duck- Oh No!</h1>
+<div class="search-wrapper">
+    <Searchbox class="search" />
+</div>
+<div class="error-text">
+    Something went wrong! If this continues to happen, open an issue at
+    <br />
+    <a href="https://github.com/someaspy/duckduckno/issues/new">
+        https://github.com/someaspy/duckduckno/issues/new
+    </a>
+    !
+</div>
+<Footer github="error.astro" />
+<style>
+    .logo-container {
+        transform: rotate(130deg);
+    }
+
+    .error-text {
+        color: white;
+        font-family: "Public Sans", sans-serif;
+        text-align: center;
+        margin-top: 20vh;
+    }
+</style>

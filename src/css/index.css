@@ -3,7 +3,7 @@ body {
 	overflow-x: hidden;
 }
 
-.logoElement {
+.logo-element {
 	position: absolute;
 	top: 5vh;
 	left: 50vw;
@@ -21,23 +21,14 @@ body {
 	margin-top: 35vh;
 }
 
-.logoContainer:hover {
+.logo-container:hover {
 	transform: scale(1.2);
 	transition: 0.5s;
 }
-
-.search input {
+.search-wrapper {
 	position: absolute;
-	top: 50vh;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 80cqw;
-	height: 6vh;
-	font-family: Manrope, sans-serif;
-	font-size: 2rem;
-	border-radius: 50px;
-	background-color: #1c1c1c;
-	color: #fff;
-	text-align: center;
-	border: none;
+	width: 40%;
+	height: 4vh;
 }

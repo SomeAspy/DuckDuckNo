@@ -10,7 +10,7 @@ export interface Result {
 	htmlFormattedUrl: string;
 }
 
-export interface ApiResponse {
-	code: number;
-	results: Result[];
+export interface GoogleCseResponse {
+	error?: { code: number; message: string };
+	items: Result[];
 }

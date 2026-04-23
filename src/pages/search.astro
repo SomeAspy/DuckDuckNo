@@ -1,0 +1,92 @@
+---
+import Logo from "../assets/logo-optimized.svg";
+import Footer from "../components/Footer.astro";
+import ResultComponent from "../components/Result.astro";
+import SearchBox from "../components/SearchBox.astro";
+import { fetchResults } from "../server/search";
+
+const query = Astro.url.searchParams.get("q");
+let page = Number(Astro.url.searchParams.get("p"));
+
+if (!page || page >= 10 || page < 0) {
+	page = 0;
+}
+
+if (query == null) {
+	return Astro.redirect("/", 302);
+}
+const results = await fetchResults(query, page);
+if (results.error?.code) {
+	console.error(results.error);
+	return Astro.redirect("/error", 302);
+}
+---
+
+<div class="navbar">
+    <a class="logo-element" href="/">
+        <Logo />
+    </a>
+    <div class="search-wrapper">
+        <SearchBox />
+    </div>
+
+    <a class="page-button"> &lt; </a>
+    <a class="page-button"> &gt; </a>
+</div>
+<div class="results">
+    {
+        results.items.map((result) => (
+            <ResultComponent
+                title={result.title}
+                description={result.snippet}
+                url={result.link}
+            />
+        ))
+    }
+</div>
+<Footer github="search.astro" />
+
+<style>
+    body {
+        background-color: #14141b;
+        overflow-x: hidden;
+    }
+
+    .logo-element {
+        width: 6vh;
+        margin-left: 1vw;
+    }
+
+    .navbar {
+        pointer-events: all;
+        flex-wrap: wrap;
+        position: absolute;
+        top: 0;
+        margin-left: -1vw;
+        width: 102vw;
+        display: flex;
+        justify-content: left;
+        background-color: #141414;
+        align-items: center;
+    }
+
+    .page-button {
+        color: #fff;
+        font-size: 3cqh;
+        margin: 2vh;
+    }
+
+    .search-wrapper {
+        width: 25vw;
+        margin: 1vw;
+    }
+
+    .results {
+        position: absolute;
+        top: 10vh;
+        left: 5%;
+        width: 75vw;
+        display: grid;
+        grid-gap: 2vh;
+    }
+</style>
