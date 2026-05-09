@@ -6,13 +6,13 @@
 		"lint": "biome check"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.4.12",
-		"@types/node": "^25.6.0",
-		"astro": "^6.1.9",
+		"@biomejs/biome": "^2.4.14",
+		"@types/node": "^25.6.2",
+		"astro": "^6.3.1",
 		"typescript": "^6.0.3"
 	},
-	"packageManager": "pnpm@11.0.0-rc.5+sha512.c469fb6aa13a99e57aec935cd7b86ff422701f4602ecac2231d3dc20910586ebfb6b50a7b455d0778ec22ae56912d8d8e88e9f9e0a03c0875a6a41783a94a1bd",
+	"packageManager": "pnpm@11.0.9+sha512.34ce82e6780233cf9cad8685029a8f81d2e06196c5a9bad98879f7424940c6817c4e4524fb7d38b8553ceed48b9758b8ebaf1abd3600c232c4c8cf7366086f38",
 	"dependencies": {
-		"@astrojs/node": "^10.0.6"
+		"@astrojs/node": "^10.1.0"
 	}
 }
