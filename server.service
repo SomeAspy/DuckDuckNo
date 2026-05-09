@@ -1,0 +1,13 @@
+[Unit]
+Description=duckduckno
+
+[Service]
+Type=exec
+Restart=always
+ExecStartPre=pnpm install --frozen-lockfile
+ExecStartPre=pnpm build
+ExecStart=pnpm start
+WorkingDirectory=~/duckduckno
+
+[Install]
+WantedBy=default.target
